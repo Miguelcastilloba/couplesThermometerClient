@@ -1,0 +1,65 @@
+.thermometer-component {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* The vertical tube */
+  .thermometer-outer {
+    position: relative;
+    width: 40px;
+    height: 200px;
+    background-color: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Center the level text overlay within the tube */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* The fill that rises from bottom to top */
+  .thermometer-fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Height and background color set dynamically via inline style */
+    transition: height 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* The numeric level text displayed in the center of the thermometer tube */
+  .thermometer-level-text {
+    position: relative; /* So it stacks above the fill */
+    z-index: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #004080;
+  }
+  
+  /* Control buttons (+, -) already styled globally or in your main CSS */
+  .control-button {
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .control-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .control-button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  
