@@ -26,19 +26,19 @@ function LoginPage() {
   };
 
   return (
-    <div className="login-page">
-      <h1>Welcome to the Thermometer App</h1>
+    <div className="login-form">
+      <h1>¡Bienvenidx!, ¡Introduce tu nombre!</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter Your Name:</label>
+        
         <input
           type="text"
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Your name"
+          placeholder="Tu nombre"
           required
         />
-        <button type="submit">Login</button>
+        <button type="submit">Acceder</button>
       </form>
       {error && <p className="error">{error}</p>}
     </div>
